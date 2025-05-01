@@ -14,7 +14,7 @@ export function Counter() {
         <span>{count}</span>
         <button onClick={() => dispatch(increment())}>+</button>
         <button onClick={() => dispatch(decrement())}>-</button>
-        <button onClick={() => dispatch(incrementByAmount(5))}>+5</button>
+        <button onClick={() => dispatch(incrementByAmount(90))}>+90</button>
         <button onClick={() => dispatch(reset())}>Reset</button>
       </div>
     </div>
