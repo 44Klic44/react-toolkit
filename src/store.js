@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 // Импортируем наш будущий слайс
-import counterReducer from './counter';
+import { counterReducer } from "./counter"
 
 export const store = configureStore({
   reducer: {
