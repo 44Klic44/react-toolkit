@@ -7,7 +7,7 @@ function UserProfile({ userId }) {
   const { currentUser, loading, error } = useSelector(state => state.user);
 
   useEffect(() => {
-    dispatch(fetchUserData(2));
+    dispatch(fetchUserData(1));
   }, [dispatch, userId]);
 
   if (loading === 'pending') return <div>Loading user data...</div>;
