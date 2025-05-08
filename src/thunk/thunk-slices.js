@@ -46,11 +46,9 @@ const userSlice = createSlice({
     // Текущее состояние (state)
     // Объект действия (action)
 
-    // fetchUserData.pending, - 
-    // Это специальный action, который автоматически генерируется createAsyncThunk:
+    // fetchUserData.pending, -fulfilled -rejected
+    // Это специальные action, которые автоматически генерируется createAsyncThunk:
     // fetchUserData.pending - action, который вызывается перед началом асинхронного запроса
-    // fetchUserData.fulfilled - при успешном завершении
-    // fetchUserData.rejected - при ошибке
       .addCase(fetchUserData.pending, (state) => { 
 
         // Это изменение состояния загрузки:
@@ -60,17 +58,31 @@ const userSlice = createSlice({
       })
 
 
-
+  // fetchUserData.fulfilled - вызываеться при успешном завершении запроса
+  // action – объект действия, который содержит данные (в payload), возвращённые из fetchUserData.
       .addCase(fetchUserData.fulfilled, (state, action) => {
+// Обновляем статус загрузки
+//state.loading = 'succeeded' – меняет состояние loading на 'succeeded', 
+// что означает успешное завершение запроса.
+// Обычно loading может быть:
+// 'idle' – запрос не начат.
+// 'pending' – запрос в процессе.
+// 'succeeded' – запрос успешно завершён.
+// 'failed' – запрос завершился ошибкой.
         state.loading = 'succeeded';
+        // // записываем данные из action.payload
+        // state.currentUser мы создаем initilstate
         state.currentUser = action.payload;
       })
 
-
+   // fetchUserData.rejected - при ошибке
       .addCase(fetchUserData.rejected, (state, action) => {
         state.loading = 'failed';
         // Используем payload из rejectWithValue
-        state.error = action.payload?.message || 'Failed to fetch user';
+// Пытается получить action.payload.message (если payload существует).
+// Если message нет или payload отсутствует, то записывает строку 'Что-то пошло не так'.
+// Результат сохраняет в state.error (поле состояния Redux, отвечающее за ошибку).
+        state.error = action.payload?.message || 'Что то пошло не так';
       });
   }
 });
