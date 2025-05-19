@@ -1,6 +1,6 @@
 // Импорт необходимых зависимостей
 import React, { useState } from 'react'; // Импорт React и хука состояния
-import { signInWithEmailAndPassword } from 'firebase/auth'; // Функция аутентификации Firebase
+import { signInWithEmailAndPassword } from 'firebase/auth'; // Функция аутентификации для входа пользователя Firebase
 import { auth } from '../firebase'; // Инициализированный объект auth из Firebase
 import { useNavigate } from 'react-router-dom'; // Хук для программной навигации
 

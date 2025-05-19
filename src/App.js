@@ -43,7 +43,9 @@ function App() {
             <Route
               path="/profile"
               element={
+                // компонент обертка только для авторизованных пользователей
                 <PrivateRoute>
+                  {/* все компоненты внутри profile после входа в личный кабинет */}
                   <Profile />
                 </PrivateRoute>
               }
