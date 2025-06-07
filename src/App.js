@@ -14,7 +14,8 @@ import Profile from './components/Profile'; // Защищенный профил
 import PrivateRoute from './components/PrivateRoute'; // Защищенный маршрут
 import { AuthProvider } from './context/AuthContext'; // Провайдер аутентификации
 import Home from './components/Home'; // Домашняя страница
-
+import Mycounter from './components/counter';
+import MyModal from './components/modal';
 // Основной компонент приложения
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
       {/* <Counter></Counter> */}
       {/* <Mycomponent></Mycomponent>
       <UserProfile></UserProfile> */}
-      
+      <Mycounter></Mycounter>
+      <MyModal></MyModal>
       {/* Настройка роутинга приложения */}
       <Router>
         {/*  компонент контекста с данными о пользователе Оборачиваем приложение в провайдер аутентификации */}
