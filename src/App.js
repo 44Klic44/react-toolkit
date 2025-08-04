@@ -5,7 +5,7 @@ import './App.css';
 // import Counter from './component'; // Компонент счетчика
 import Mycomponent from './mycomponent-roolkit/my-slices'; // Компонент с Redux Toolkit
 import UserProfile from './thunk/component-thunk'; // Компонент с Redux Thunk
-
+import { useSelector, useDispatch } from 'react-redux';
 // Импорт роутинга и компонентов аутентификации
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SignUp from './components/SignUp'; // Форма регистрации
@@ -16,8 +16,19 @@ import { AuthProvider } from './context/AuthContext'; // Провайдер ау
 import Home from './components/Home'; // Домашняя страница
 import Mycounter from './components/counter';
 import MyModal from './components/modal';
+import Mytestcomponnt from './ТРЕНИРОВКА/trenirovka';
+import MyMaterialComponent from './ТРЕНИРОВКА/component-materialui'
+import IconExample from './ТРЕНИРОВКА/button-materialui';
+import ProductCard from './ТРЕНИРОВКА/propstype';
+
 // Основной компонент приложения
 function App() {
+
+
+
+
+
+
   return (
     <div className="App">
       {/* Простые компоненты для демонстрации */}
@@ -26,6 +37,18 @@ function App() {
       <UserProfile></UserProfile> */}
       <Mycounter></Mycounter>
       <MyModal></MyModal>
+<MyMaterialComponent></MyMaterialComponent>
+<IconExample></IconExample>
+<ProductCard 
+  product={{
+    id: '2',
+    name: 'впыввыа',
+    price: '1',
+    discount: 10 // необязательно
+  }}
+/>
+
+      <Mytestcomponnt  name={'ROMAN 2'} age={30}></Mytestcomponnt>
       {/* Настройка роутинга приложения */}
       <Router>
         {/*  компонент контекста с данными о пользователе Оборачиваем приложение в провайдер аутентификации */}
