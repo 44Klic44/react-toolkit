@@ -20,7 +20,7 @@ import Mytestcomponnt from './ТРЕНИРОВКА/trenirovka';
 import MyMaterialComponent from './ТРЕНИРОВКА/component-materialui'
 import IconExample from './ТРЕНИРОВКА/button-materialui';
 import ProductCard from './ТРЕНИРОВКА/propstype';
-
+import LessonOne from './ВСПОМИНАЮ РЕАКТ/lesson-one';
 // Основной компонент приложения
 function App() {
 
@@ -28,9 +28,10 @@ function App() {
 
 
 
-
+console.log(<LessonOne name = {"ROM"} age = {30}></LessonOne>)
   return (
     <div className="App">
+      <LessonOne name = {"ROM"} age = {30}></LessonOne>
       {/* Простые компоненты для демонстрации */}
       {/* <Counter></Counter> */}
       {/* <Mycomponent></Mycomponent>

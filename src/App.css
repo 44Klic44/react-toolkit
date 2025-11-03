@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+.name{
+  font-size: 30px;
+  text-transform: uppercase;
+  color: rgb(32, 32, 183);
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
