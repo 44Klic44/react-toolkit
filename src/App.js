@@ -31,7 +31,7 @@ function App() {
 console.log(<LessonOne name = {"ROM"} age = {30}></LessonOne>)
   return (
     <div className="App">
-      <LessonOne name = {"ROM"} age = {30}></LessonOne>
+      <LessonOne name = {"ROM"} age = {30} theme = {theme}></LessonOne>
       {/* Простые компоненты для демонстрации */}
       {/* <Counter></Counter> */}
       {/* <Mycomponent></Mycomponent>
