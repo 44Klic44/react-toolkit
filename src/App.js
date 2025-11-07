@@ -20,10 +20,13 @@ import Mytestcomponnt from './ТРЕНИРОВКА/trenirovka';
 import MyMaterialComponent from './ТРЕНИРОВКА/component-materialui'
 import IconExample from './ТРЕНИРОВКА/button-materialui';
 import ProductCard from './ТРЕНИРОВКА/propstype';
-import LessonOne from './ВСПОМИНАЮ РЕАКТ/lesson-one';
+import LessonOne from './ВСПОМИНАЮ РЕАКТ/Lesson-one/lesson-one';
+import LessonToo from './ВСПОМИНАЮ РЕАКТ/Lesson-too/lessonToo';
+import Calculator from './ВСПОМИНАЮ РЕАКТ/Lesson-too/Сalc';
+import MassageRobot from './ВСПОМИНАЮ РЕАКТ/Lesson-too/massageRobot';
 // Основной компонент приложения
 function App() {
-
+const theme ='d'
 
 
 
@@ -31,7 +34,12 @@ function App() {
 console.log(<LessonOne name = {"ROM"} age = {30}></LessonOne>)
   return (
     <div className="App">
+<MassageRobot></MassageRobot>
+
       <LessonOne name = {"ROM"} age = {30} theme = {theme}></LessonOne>
+
+      <LessonToo data={'priv'}></LessonToo>
+      <Calculator></Calculator>
       {/* Простые компоненты для демонстрации */}
       {/* <Counter></Counter> */}
       {/* <Mycomponent></Mycomponent>
