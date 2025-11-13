@@ -43,3 +43,31 @@
 }
 
 
+.tabs {
+  display: flex;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+  gap: 0.5rem;
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  color: #6c757d;
+  border-radius: 6px;
+  transition: all 0.3s;
+  flex: 1;
+  text-align: center;
+}
+
+.tab:hover {
+  background-color: #e9ecef;
+  color: #495057;
+}
+
+.tab.active {
+  background-color: #007bff;
+  color: white;
+}
