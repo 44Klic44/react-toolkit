@@ -22,6 +22,9 @@ import Massage from './reactnew/Lesson-too/my-massage';
 import LesssonThree from './reactnew/lesson-three/lesson-three';
 import LessonFO from './reactnew/Lesson-fo/lessonFo';
 import About from './reactnew/Lesson-fo/About'; // Убран дублирующий импорт Home
+import LessonFive from './reactnew/lesson-five/lessonFive';
+import { LessonProvider } from './reactnew/lesson-five/LessonContext';
+
 
 function App() {
   const theme = 'light';
@@ -30,7 +33,28 @@ function App() {
   const [isImageModalOpen, setIsImageModalOpen] = useState(false);
 
   return (
+     <LessonProvider>
     <div className="App">
+
+
+     
+
+<LessonFive></LessonFive>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       {/* ОДИН Router на всё приложение */}
       <Router>
         <AuthProvider>
@@ -140,6 +164,7 @@ function App() {
         </AuthProvider>
       </Router>
     </div>
+    </LessonProvider>
   );
 }
 
