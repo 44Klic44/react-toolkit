@@ -24,7 +24,7 @@ import LessonFO from './reactnew/Lesson-fo/lessonFo';
 import About from './reactnew/Lesson-fo/About'; // Убран дублирующий импорт Home
 import LessonFive from './reactnew/lesson-five/lessonFive';
 import { LessonProvider } from './reactnew/lesson-five/LessonContext';
-
+import { SimpleComponent } from './reactnew/lesson-five/SimpleComponent';
 
 function App() {
   const theme = 'light';
@@ -37,7 +37,7 @@ function App() {
     <div className="App">
 
 
-     
+     <SimpleComponent></SimpleComponent>
 
 <LessonFive></LessonFive>
 
